@@ -25,7 +25,7 @@ function App() {
         minHeight: "100vh",
       }}>
         <Header />
-        {/* <Preloader duration={4700} /> */}
+        <Preloader duration={4700} />
 
         <div className="main-content">
           <AppRoutes />   {/* ✅ works now */}

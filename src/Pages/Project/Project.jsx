@@ -22,7 +22,7 @@ const GlobalFixes = createGlobalStyle`
 
 /* Data */
 const PROJECTS = [
-  { img: img1, title: "AnalyticBridge Website Design", desc: "Fast, responsive SaaS website UI.", tags: ["React", "SaaS"], link: "#", github: "#", category: "Web Design" },
+  { img: "https://image.thum.io/get/width/1200/https://www.thejourneyloop.com/", title: "AnalyticBridge Website Design", desc: "Fast, responsive SaaS website UI.", tags: ["React", "SaaS"], link: "#", github: "#", category: "Web Design" },
   { img: img2, title: "Payments Dashboard", desc: "Payments dashboard UI with charts and filters.", tags: ["React", "API"], link: "#", github: "#", category: "App Development" },
   { img: img3, title: "Portfolio Website", desc: "Portfolio built with modern UI patterns.", tags: ["React", "Bootstrap"], link: "#", github: "#", category: "Graphic Design" },
 ];
@@ -32,7 +32,7 @@ const settings = { dots: false, infinite: true, speed: 520, slidesToShow: 1, sli
 export default function ProjectsStylishEnhanced() {
   const sliderRef = useRef(null);
   const [active, setActive] = useState(0);
-  const [viewMode, setViewMode] = useState("grid"); // 'slider' | 'grid'
+  const [viewMode, setViewMode] = useState("slider"); // 'slider' | 'grid'
   const [filter, setFilter] = useState("All");
   const [expandedIdx, setExpandedIdx] = useState(null);
 
