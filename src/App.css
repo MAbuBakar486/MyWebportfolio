@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,907 @@
     transform: rotate(360deg);
   }
 }
+
+/* <============================= CSS for Head =========================================> */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+
+.green {
+  color: #01be96;
+}
+
+.Typewriter {
+    text-align: center;
+    /* width: 70%; */
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.slick-list,
+.slick-slider,
+.slick-track {
+  padding: 1.5rem 0;
+}
+
+.center .slick-center .project {
+  transform: scale(1.3);
+  z-index: 10000;
+  transition: all 400ms ease-in-out;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.center .project {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media(max-width: 990px) {
+  .center .slick-center .project {
+      transform: scale(1);
+  }
+
+  .center .project {
+      opacity: 1;
+      pointer-events: all;
+  }
+}
+
+
+/* <============================= CSS for Scrolling =========================================> */
+.scroll-to-top {
+  position: fixed;
+  bottom: 55px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background-color: #c82333;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.scroll-to-top:active {
+  transform: scale(0.95);
+}
+
+.scroll-to-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.scroll-to-top:hover::after {
+  opacity: 1;
+}
+
+
+/* <============================= CSS for FAQ's =========================================> */
+/* Style for question box */
+.accordion-button {
+  border: 1px solid red;
+  font-weight: 500;
+  color: black;
+}
+
+/* Active question */
+.accordion-button:not(.collapsed) {
+  background-color: #f87171; /* red-400 */
+  color: white;
+  box-shadow: none;
+}
+
+/* Answer box */
+.accordion-body {
+  border: 1px solid red;
+  border-top: none;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Remove default shadow */
+.accordion-item {
+  border: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* <============================= CSS for Reason's =========================================> */
+/* src/components/Services.css */
+
+/* PAGE background black */
+:root{
+  --card-radius: 16px;
+  --icon-size: 56px;        /* icon square size */
+  --icon-top: 18px;         /* top offset of icon from top of card-inner */
+  --icon-gap: 12px;         /* gap between bottom of icon and content */
+  --piece-size: 48px;
+  --accent1: #10b981;
+  --accent2: #3b82f6;
+}
+
+/* IMPORTANT: card-inner padding-top must reserve room for the absolutely-positioned icon */
+.card-inner{
+  position:relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: calc(var(--card-radius) - 4px);
+  /* Use calc so any future icon-size change keeps layout correct */
+  padding: calc(var(--icon-top) + var(--icon-size) + var(--icon-gap)) 22px 22px 22px;
+  overflow: visible;
+  min-height: 200px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  transition: box-shadow 220ms ease, transform 220ms ease;
+  isolation: isolate;
+}
+
+/* icon box top-left - use the vars so both layout and visuals are synced */
+.icon-box{
+  position:absolute;
+  top: var(--icon-top);
+  left: 18px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--accent1), var(--accent2));
+  display:grid; place-items:center; color:#fff; z-index:50; /* ensure icon on top */
+  box-shadow: 0 8px 24px rgba(2,6,23,0.5);
+}
+
+/* ensure icon svg scales to the box */
+.icon-box .icon {
+  width: calc(var(--icon-size) * 0.36);   /* keep icon comfortably smaller than the box */
+  height: calc(var(--icon-size) * 0.36);
+}
+
+/* content area MUST be below the reserved icon area (no negative margins) */
+.content {
+  margin: 0;
+  padding: 0;           /* content placed after top padding */
+}
+
+/* title & description styling — ensure spacing and readability */
+.service-title{
+  color:#fff;
+  margin: 0 0 10px 0;
+  font-size: 1.02rem;
+  font-weight:700;
+  line-height: 1.25;
+  word-break: break-word;
+}
+.service-desc{
+  margin: 0;
+  color:#b8c7d9;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* responsive: reduce icon size & keep top padding consistent */
+@media (max-width: 576px){
+  :root {
+    --icon-size: 48px;
+    --icon-top: 14px;
+    --icon-gap: 10px;
+    --piece-size: 40px;
+  }
+
+  .card-inner{
+    padding: calc(var(--icon-top) + var(--icon-size) + var(--icon-gap)) 14px 14px 14px;
+    border-radius: 12px;
+    min-height: 150px;
+  }
+  .icon-box{ width: var(--icon-size); height: var(--icon-size); top: var(--icon-top); left: 14px; border-radius:10px; }
+  .icon-box .icon { width: calc(var(--icon-size) * 0.36); height: calc(var(--icon-size) * 0.36); }
+}
+
+
+/* BORDER-PIECES: default small border fragments (using border properties)
+   bl = bottom-left piece (shows left+bottom)
+   tr = top-right piece (shows top+right)
+*/
+.border-piece{
+  position:absolute;
+  pointer-events:none;
+  transition: all 320ms cubic-bezier(.2,.9,.2,1);
+  z-index: 20;
+}
+
+/* bottom-left piece */
+.border-piece.bl{
+  width: var(--piece-size);
+  height: var(--piece-size);
+  left: 12px;
+  bottom: 12px;
+  border-left: 3px solid rgba(16,185,129,0.18);
+  border-bottom: 3px solid rgba(16,185,129,0.18);
+  border-top: 0;
+  border-right: 0;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* top-right piece */
+.border-piece.tr{
+  width: var(--piece-size);
+  height: var(--piece-size);
+  right: 12px;
+  top: 12px;
+  border-right: 3px solid rgba(59,130,246,0.12);
+  border-top: 3px solid rgba(59,130,246,0.12);
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* HOVER: expand both pieces into a full border (now implemented as borders)
+   - BL will expand to become the main frame (left+bottom strong color)
+   - TR expands subtly to blend as accent
+*/
+.card-inner:hover .border-piece.bl{
+  left: 8px;
+  bottom: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-left: 2px solid rgba(16,185,129,0.95);   /* strong left/bottom green */
+  border-bottom: 2px solid rgba(16,185,129,0.95);
+  border-top: 2px solid rgba(59,130,246,0.12);     /* faint top/right blue */
+  border-right: 2px solid rgba(59,130,246,0.12);
+  border-radius: 12px;
+  background: transparent;
+}
+
+/* TR expands a little to avoid double thick lines and provide two-tone hint */
+.card-inner:hover .border-piece.tr{
+  right: 8px;
+  top: 8px;
+  width: 64px;
+  height: 64px;
+  border-right: 2px solid rgba(59,130,246,0.4);
+  border-top: 2px solid rgba(59,130,246,0.4);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+/* ensure icon is on top of expanded border */
+.card-inner .icon-box{ z-index: 50; }
+
+/* Responsive adjustments */
+@media (max-width: 992px){
+  .card-col { flex: 1 1 calc(50% - 20px); }
+  .card-inner { padding: 40px 18px 18px 18px; min-height: 180px; }
+  .border-piece { display: block; }
+}
+@media (max-width: 576px){
+
+    :root {
+    --icon-size: 48px;
+    --icon-top: 14px;
+    --icon-gap: 10px;
+    --piece-size: 40px;
+  }
+
+  .card-col { flex: 1 1 100%; }
+    .card-inner{
+    padding: calc(var(--icon-top) + var(--icon-size) + var(--icon-gap)) 14px 14px 14px;
+    border-radius: 12px;
+    min-height: 150px;
+  }
+  .icon-box{ width: var(--icon-size); height: var(--icon-size); top: var(--icon-top); left: 14px; border-radius:10px; }
+  .icon-box .icon { width: calc(var(--icon-size) * 0.36); height: calc(var(--icon-size) * 0.36); }
+  .border-piece.bl, .border-piece.tr { width:40px; height:40px; }
+}
+
+
+/* <============================= CSS for Reason's =========================================> */
+/* AboutMarquee.css — JS-measured pixel marquee (robust) */
+
+:root{
+  --bg: #0f1724;
+  --muted: #9fb0c6;
+  --panel-radius: 16px;
+  --left-column: 360px;
+}
+
+.about-section{
+  background: var(--bg);
+  color: #dbeafe;
+  padding: 56px 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* container with left padding as you wanted */
+.about-inner{ max-width:1200px; margin:0 auto; padding-left:56px; padding-right:20px; box-sizing:border-box; }
+.about-header{ text-align:left; margin-bottom:24px; }
+.eyebrow{ color:#6ee7b7; font-weight:700; display:block; margin-bottom:8px; }
+.about-title{ font-size:2.2rem; margin:0 0 6px; color:#fff; }
+.about-sub{ color:var(--muted); margin:0 0 12px; }
+
+/* grid left fixed, right flexible */
+.about-grid{ display:grid; grid-template-columns: var(--left-column) 1fr; gap:24px; align-items:start; }
+
+/* panels */
+.panel{ background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  border-radius: var(--panel-radius); padding:18px; box-shadow:0 12px 36px rgba(2,6,23,0.55);
+  border: 1px solid rgba(255,255,255,0.03); min-height:280px; box-sizing:border-box; overflow:hidden;
+}
+.panel-title{ color:#fff; margin:0; font-weight:700; font-family: tiempos,serif;}
+
+/* reads panel */
+.book-card img{ width:100%; max-width:260px; border-radius:8px; box-shadow:0 8px 26px rgba(2,6,23,0.55); }
+
+/* toolbox */
+.toolbox-marquees{ margin-top:10px; display:flex; flex-direction:column; gap:12px; }
+
+/* MARQUEE viewport */
+.marquee{ width:100%; overflow:hidden; border-radius:10px; padding:6px; box-sizing:border-box;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* THE TRACK is the element we set CSS vars on via JS:
+   it receives --shift-px (pixel width of a single set) and --marquee-duration value.
+   track-content is the flex row that actually animates.
+*/
+.track{
+  width:100%;
+}
+
+/* track-content contains two .set children (duplicated). We animate translateX from 0 -> -<shift-px> */
+.track-content{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  width:max-content; /* important */
+  will-change: transform;
+  /* use CSS vars that JS writes:
+     --shift-px: pixel width of the first .set (no unit issues)
+     --marquee-duration: time string (e.g. "20s")
+  */
+  animation-name: marqueeMove;
+  animation-duration: var(--marquee-duration, 18s);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateX(0);
+}
+
+/* reverse direction for track with .reverse */
+.track.reverse .track-content{
+  animation-direction: reverse;
+}
+
+/* Pause on hover (freezes in place exactly where hovered) */
+.marquee:hover .track-content,
+.marquee:focus-within .track-content {
+  animation-play-state: paused;
+}
+
+/* the moving keyframes use the JS-provided pixel shift */
+@keyframes marqueeMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(var(--shift-px) * -1)); } /* shift by exact pixel width */
+}
+
+/* Set visual layout for a repeated set container */
+.set{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+/* ensure badges never wrap and don't shrink */
+.tech-badge{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:12px;
+  background: rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.03);
+  color: #dbeafe;
+  min-width:110px;
+  flex: 0 0 auto;  /* important: no shrink, no grow */
+  box-sizing:border-box;
+}
+
+/* icon wrap */
+.icon-wrap{ width:30px; height:30px; display:grid; place-items:center; color:#62e0b3; background: rgba(98,224,179,0.06); border-radius:8px; }
+
+/* small responsive */
+@media (max-width: 992px) {
+  :root{ --left-column: 300px; }
+  .about-inner{ padding-left:36px; }
+  .about-grid{ gap:18px; }
+}
+@media (max-width: 760px) {
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-inner{ padding-left:20px; padding-right:20px; }
+  .panel{ min-height: auto; }
+  .book-card img{ max-width:180px; }
+  .tech-badge { min-width: 90px; padding:8px 10px; }
+}
+
+
+/* <============================= CSS for Tech's =========================================> */
+/* Technologies.css - two column socials + techs, dark rounded tiles */
+
+.tech-section {
+  background: #0e1114;
+  color: #dfeefc;
+  padding: 48px 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.tech-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.tech-heading {
+  text-align: center;
+  color: #cfe8ff;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+/* Two-column layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* column heading */
+.col-title {
+  color: #e6f6ff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 6px 0 10px;
+  padding-left: 6px;
+}
+
+/* grid of tiles inside each column */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
+  gap: 20px 24px; /* vertical gap, horizontal gap */
+  justify-items: center;
+  align-items: stretch;
+  padding: 12px 8px 20px;
+}
+
+
+/* tile visual */
+.tech-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  width: 92px;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow:
+    inset 0 6px 12px rgba(2,6,23,0.55),
+    0 8px 20px rgba(2,6,23,0.6);
+  color: #dfeefc;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  outline: none;
+}
+
+.tech-card:focus,
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    inset 0 8px 18px rgba(2,6,23,0.6),
+    0 18px 40px rgba(2,6,23,0.7);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+}
+
+/* icon circle inside tile */
+.tech-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  color: #aeeacf;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+/* label under icon */
+.tech-label {
+  font-size: 0.72rem;
+  color: rgba(223,238,252,0.9);
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Modal overlay */
+.tech-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  padding: 18px;
+}
+
+/* modal panel */
+.tech-modal {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, #0e1216, #0b0d10);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 18px 60px rgba(2,6,23,0.85);
+  color: #eaf6ff;
+  overflow: hidden;
+}
+
+/* modal header */
+.modal-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+.modal-header h4 { margin:0; font-size:1.05rem; }
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #cfe8ff;
+  cursor: pointer;
+}
+
+/* modal body */
+.modal-body { padding: 18px; }
+.modal-desc { margin: 0 0 12px; color: #bcd3e8; line-height:1.45; }
+
+/* modal button row */
+.modal-link-row { display:flex; gap:12px; align-items:center; }
+.modal-open-btn, .modal-copy-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: linear-gradient(180deg,#1f2937,#111214);
+  color: #e6f6ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.modal-open-btn:hover, .modal-copy-btn:hover { transform: translateY(-3px); }
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 880px) {
+  .two-column { grid-template-columns: 1fr; }
+  .tech-grid { grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; }
+  .tech-card { width: 80px; height: 80px; }
+  .tech-icon { width:36px; height:36px; font-size:16px; }
+}
+
+/* <============================= CSS for Contact's =========================================> */
+.EHNsp {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    background: linear-gradient(270deg, #582858 10%, #6e2668 100%);
+    clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 70% 95%, 0px 100%);
+}
+
+.bEDFbS {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1350px;
+    padding: 0px 0px 80px;
+    gap: 12px;
+}
+
+.dueNOl {
+    font-size: 42px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    color: rgb(242, 243, 244);
+}
+
+.fIDHyg {
+    font-size: 18px;
+    text-align: center;
+    max-width: 600px;
+    color: rgb(177, 178, 179);
+}
+
+.bngZdt {
+    width: 95%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 23, 33);
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    margin-top: 28px;
+    gap: 12px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.bFLFZT {
+    font-size: 24px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgb(242, 243, 244);
+}
+
+.hYtKIX {
+    flex: 1 1 0%;
+    background-color: transparent;
+    border: 1px solid rgb(177, 178, 179);
+    outline: none;
+    font-size: 18px;
+    color: rgb(242, 243, 244);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.dAzLIn {
+    flex: 1 1 0%;
+    background-color: transparent;
+    border: 1px solid rgb(177, 178, 179);
+    outline: none;
+    font-size: 18px;
+    color: rgb(242, 243, 244);
+    border-radius: 12px;
+    padding: 12px 16px;
+}
+
+.efxqxg {
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: -webkit-linear-gradient(225deg, rgb(132, 0, 255) 0%, rgb(230, 0, 255) 100%);
+    padding: 13px 16px;
+    margin-top: 2px;
+    border-radius: 12px;
+    border: none;
+    color: rgb(242, 243, 244);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.queryinfo {
+    display: block;
+    margin: 5px 0;
+    color: yellow;
+}
+
+/* email.css */
+.error {
+    color: white;
+    /* Set error text color to white */
+    font-size: 14px;
+    /* Optional: Adjust the font size if needed */
+    margin-top: 5px;
+}
+
+/* <============================= Responsiveness CSS =========================================> */
+
+
+@media screen and (max-width:576px) {
+
+    /* .EHNsp {
+        padding-right: 8%;    
+        padding-left: 8%;
+        padding-top: 15px;
+        padding-bottom: 5%;
+    } */
+    .EHNsp {
+        padding: 0 10px;
+        /* display: flex; */
+        /* padding-left: 5%; */
+        /* padding: 0px; */
+    }
+}
+
+
+/* <============================= Responsiveness CSS for services=========================================> */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.pillarscontainer{
+    min-height: 45vh;
+    width: 100%;
+    /* background-color: #191a2b; */
+}
+
+.service-wrapper{
+    padding-right: 8%;    
+    padding-left: 8%;
+    padding-top: 15px;
+    padding-bottom: 5%;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes anim {
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 88%;
+    }
+}
+
+.Scards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Scard{
+    height: 200px;
+    width: 350px;
+    background-color: #1c2335;
+    padding: 3% 8%;
+    border: 0.2px solid rgba(114, 226, 174,0.2);
+    border-radius: 8px;
+    transition: .6s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+.Scard:after{
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transform: rotate(50deg);
+    background-color: #fff;
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0.5;
+    transition: 1s;
+}
+.Scard:hover:after{
+    width: 225%;
+    top: -100%;
+}
+.Scard i{
+    color: #72e2ae;
+    /* margin-top: 10px; */
+    margin-bottom: 5px;
+    font-size: 3.8rem;
+}
+
+.Scard h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.Scard p{
+    text-align: justify;
+    width: 100%;
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.6);
+
+}
+.Scard:hover{
+    /* background-color: transparent; */
+    transform: translateY(-8px);
+    border-color: #00ff37;
+    /* transform: scale(1.05); */
+    transition: 0.4s;
+    background: linear-gradient(270deg, #582858 10%, #6e2668 100%);
+    /* background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%); */
+    /* background: linear-gradient(45deg, #3f0028, #582300); */
+}
+
+.Scard:hover i{
+    color: #00ff37;
+}
+
+@media screen and (max-width:1200px) {
+    .Scards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width:900px) {
+    
+    .Scard{
+        height: 250px;
+        width: 310px;
+    }
+}
+@media screen and (max-width:576px) {
+    
+    .Scards{
+        grid-template-columns: repeat(1,1fr);
+        padding-right: 30px ;
+    }
+
+}
+
