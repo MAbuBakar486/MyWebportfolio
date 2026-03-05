@@ -4,13 +4,13 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { Toaster } from "react-hot-toast";
 import Cursor from './Widgets/Cursor.js';
-import ScrollToTop from '../src/Widgets/Scroll.js';
+import ScrollToTop from './Widgets/Scroll.js';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
 import Preloader from "./Components/Preloader.js";
-import '../src/App.css';
+import './App.css';
 import WhatsAppButton from './Components/Whatsapp.js';
-import ResetPage from '../src/Widgets/ResetPage.js';
+import ResetPage from './Widgets/ResetPage.js';
 // import { HashRouter ,Route, Routes } from 'react-router-dom';
 import AppRoutes from "./routes.js";
 

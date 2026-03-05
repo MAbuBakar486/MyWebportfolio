@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes, createGlobalStyle } from 'styled-components';
-import { BsRobot, BsSend, BsXLg, BsPlusLg, BsMic, BsSoundwave } from "react-icons/bs";
+import { BsRobot, BsSend, BsXLg } from "react-icons/bs";
 import axios from 'axios';
 
 const WEBHOOK_URL = "https://n8n.sovanza.net/webhook/chatbot";
@@ -82,24 +82,7 @@ const Header = styled.div`
 
 // ... keep UserInfo, CloseButton ...
 
-const UserInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 
-  h2 {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: 700;
-  }
-
-  p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin: 0;
-  }
-`;
 
 const CloseButton = styled.button`
   background: var(--card-border);
@@ -212,24 +195,7 @@ const InputWrapper = styled.div`
   }
 `;
 
-const ActionIcon = styled.button`
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  color: #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
 
-  &:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-  }
-`;
 
 const TalkBtn = styled.button`
   background: #F05A28;

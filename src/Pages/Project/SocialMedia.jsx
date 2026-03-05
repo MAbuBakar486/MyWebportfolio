@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Slide } from 'react-awesome-reveal';
 import {
   FaGithub,
-  FaTwitter,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,

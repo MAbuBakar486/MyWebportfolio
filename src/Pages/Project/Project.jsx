@@ -118,11 +118,10 @@ export default function ProjectsStylishEnhanced() {
   const sliderRef = useRef(null);
   const [active, setActive] = useState(0);
   const [viewMode, setViewMode] = useState("grid"); // 'slider' | 'grid'
-  const [filter, setFilter] = useState("All");
   const [expandedIdx, setExpandedIdx] = useState(null);
 
-  const categories = ["All", "Web Design", "Graphic Design", "App Development"];
-  const filteredProjects = filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
+
+  const filteredProjects = PROJECTS;
 
   /* Framer variants */
   const containerVariant = {
@@ -466,20 +465,7 @@ const Circle = styled.button`
 `;
 
 /* Grid mode */
-const GridControls = styled.div` margin-bottom:12px; `;
-const FilterRow = styled.div` display:flex; gap:10px; flex-wrap:wrap; `;
 
-const FilterPill = styled.button`
-  padding:8px 14px;
-  border-radius:999px;
-  background: ${(p) => (p.active ? "linear-gradient(90deg,#2b6fff,#2563eb)" : "var(--card-bg)")};
-  color: ${(p) => (p.active ? "#fff" : "var(--text-color)")};
-  border: 1px solid var(--card-border);
-  cursor:pointer;
-  font-weight:700;
-  transition: transform .12s ease, box-shadow .12s ease;
-  &:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(38,77,255,0.06); }
-`;
 
 /* Featured Grid Layout Extensions */
 const FilterHeaderContainer = styled.div`

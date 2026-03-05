@@ -132,27 +132,7 @@ const ButtonSolid = styled(ScrollLink)`
   }
 `;
 
-const ButtonOutline = styled(ScrollLink)`
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: transparent;
-  color: var(--text-color);
-  border: 1px solid var(--card-border);
-  padding: 0.8rem 1.8rem;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
 
-  &:hover {
-    border-color: ${primaryOrange};
-    background: rgba(240, 90, 40, 0.05);
-    color: ${primaryOrange};
-  }
-`;
 
 const ButtonExternal = styled.a`
   display: flex;

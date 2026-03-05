@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+
 import { Helmet } from "react-helmet-async";
 import Projects from "../Pages/Project/Project.jsx";
 import Clients from "../Pages/Project/Clients.jsx";
@@ -13,36 +13,11 @@ import Services from "../Pages/Project/Services.jsx";
 import Contact from "../Pages/Project/Contact.jsx";
 import Expertise from "../Pages/Project/Expertise.jsx";
 import SocialMedia from "../Pages/Project/SocialMedia.jsx";
-import { FaHeart, FaCalendarAlt, FaStar, FaUsers } from "react-icons/fa";
+
 
 const Home = () => {
 
-  const faqs = [
-    {
-      question: "What is Madani Marriage?",
-      answer: "Madani Marriage is a trusted Muslim matrimonial platform dedicated to helping Muslims worldwide find halal, compatible, and lifelong partners based on Islamic values."
-    },
-    {
-      question: "Is my information private and secure?",
-      answer: "Absolutely. We prioritize your privacy and use strong security measures to protect your personal details. Only registered members can view limited profile information."
-    },
-    {
-      question: "Do you provide halal matchmaking?",
-      answer: "Yes, Madani Marriage strictly follows Islamic guidelines, ensuring all connections and interactions are halal, respectful, and guided by the principles of Nikah."
-    },
-    {
-      question: "Can I search for matches from different countries?",
-      answer: "Yes, our global Muslim matrimonial platform allows you to connect with potential life partners from various countries, cultures, and backgrounds."
-    },
-    {
-      question: "Do families get involved in the process?",
-      answer: "Yes, we encourage family participation to ensure the matrimonial process remains transparent, halal, and in accordance with Islamic traditions."
-    },
-    {
-      question: "How do I contact support?",
-      answer: "You can reach our support team anytime at madanimarriagebureau12@gmail.com or +923204402940 for assistance with your account, profile, or matchmaking process."
-    }
-  ];
+
 
   return (
     <>
