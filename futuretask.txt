@@ -1,0 +1,10 @@
+assistant design for portfolio website Adjust as when click on it, a pop up like open where we talk with assistant etc and website ison back side wih bluring like effect !!! Modern type I upload design just for hnt remove three div's (belowed subheading) text input same as it is etc
+
+like that
+
+and
+i will connect with N8N
+I already setup everything
+webhook : https://n8n.sovanza.net/webhook/chatbot
+
+And for effieicncy, if user visit multiple times a day , then its previous chat will disappear after 12hours

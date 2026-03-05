@@ -1,0 +1,481 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ✅ Default — Desktop & Laptop */
+body {
+    padding-top: calc(var(--header-height) + 1rem);
+}
+
+/* ✅ Navbar stays fixed at top */
+.header {
+    top: 0;
+    bottom: auto;
+}
+
+/* ✅ Tablet & Mobile — Navbar moves to bottom */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 0 !important;
+        padding-bottom: calc(var(--header-height) + 1rem);
+    }
+
+    .header {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+
+:root {
+    --header-height: 3rem;
+    --body-color: #00ff37;
+    --hue: 0;
+    --sat: 0%;
+    --container-color: #fff;
+    --body-font: "Poppins", sans-serif;
+
+    /* ============== Theme Colors (Dark - Default) =============== */
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --card-bg: #15171a;
+    --card-border: rgba(255, 255, 255, 0.05);
+    --header-bg: rgba(10, 10, 12, 0.95);
+    --header-border: rgba(255, 255, 255, 0.08);
+    --nav-text: #cbd8f5;
+    --logo-bg: #1a1625;
+    --logo-text: #e5b95c;
+    --stat-box-bg: rgba(20, 20, 20, 0.6);
+    --input-bg: transparent;
+    --input-border: #b1b2b3;
+    --input-text: #f2f3f4;
+    --input-placeholder: rgba(255, 255, 255, 0.4);
+
+    /* ============== Footer Colors =============== */
+    --footer-bg: #0a0a0c;
+    --footer-text: #ffffff;
+    --footer-text-muted: #9aa3ae;
+    --footer-accent: #F05A28;
+
+    /* ============== Font Family =============== */
+    --big-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --tiny-font-size: 0.625rem;
+
+    /* ============== Font Weight =============== */
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-large: 600;
+
+    /* ============== Margin bottoms =============== */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 0.25rem;
+    --mb-3: 3rem;
+
+    /* ============== z Indexs =============== */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-model: 1000;
+
+}
+
+/* Light Mode Variables */
+body.light-mode {
+    --bg-color: #f8f9fa;
+    --text-color: #121212;
+    --text-muted: #555555;
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-border: rgba(0, 0, 0, 0.08);
+    --nav-text: #333333;
+    --logo-bg: #f0f0f0;
+    --logo-text: #F05A28;
+    --stat-box-bg: rgba(255, 255, 255, 0.8);
+    --input-bg: #ffffff;
+    --input-border: #cccccc;
+    --input-text: #121212;
+    --input-placeholder: rgba(0, 0, 0, 0.4);
+
+    /* ============== Footer Colors =============== */
+    --footer-bg: #ffffff;
+    --footer-text: #121212;
+    --footer-text-muted: #555555;
+    --footer-accent: #F05A28;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+    background-size: 3px 3px;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 3px 3px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body.light-mode .about-section,
+body.light-mode .tech-section,
+body.light-mode .EHNsp {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+body.light-mode .header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+}
+
+body.light-mode .nav_link,
+body.light-mode .about-title,
+body.light-mode .about-sub,
+body.light-mode .about-bio,
+body.light-mode .tech-heading,
+body.light-mode .col-title,
+body.light-mode .panel-title,
+body.light-mode .panel-desc {
+    color: var(--text-color) !important;
+}
+
+body.light-mode .panel {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .tech-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.05), 0 8px 20px rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+}
+
+body.light-mode .tech-label {
+    color: var(--text-muted);
+}
+
+body.light-mode .card-inner {
+    background: var(--card-bg);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .service-title {
+    color: var(--text-color);
+}
+
+body.light-mode .service-desc {
+    color: var(--text-muted);
+}
+
+/* Contact Overrides */
+body.light-mode .bngZdt {
+    background-color: var(--card-bg);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 24px;
+}
+
+body.light-mode .bFLFZT,
+body.light-mode .dueNOl {
+    color: var(--text-color);
+}
+
+body.light-mode .fIDHyg {
+    color: var(--text-muted);
+}
+
+body.light-mode .hYtKIX,
+body.light-mode .dAzLIn {
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    background-color: var(--input-bg);
+}
+
+/* Specific Component ID Overrides for Light Mode */
+body.light-mode #Contact h2,
+body.light-mode #Contact h4,
+body.light-mode #Contact h5 {
+    color: #121212;
+}
+
+body.light-mode #Contact p,
+body.light-mode #Contact li {
+    color: #555;
+}
+
+body.light-mode #Contact input,
+body.light-mode #Contact select,
+body.light-mode #Contact textarea {
+    color: #121212;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode #Contact input::placeholder,
+body.light-mode #Contact textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-mode #Contact select option {
+    background: #fff;
+    color: #121212;
+}
+
+body.light-mode #Contact .icon-wrapper {
+    color: #fff;
+}
+
+body.light-mode .RightSide,
+body.light-mode div[class*="RightSide"] {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Demo component Overrides */
+body.light-mode #home h1 .white-text,
+body.light-mode #home h1 {
+    color: #121212 !important;
+}
+
+body.light-mode #home p {
+    color: #555 !important;
+}
+
+body.light-mode #home div[class*="StatBox"] {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode #home div[class*="StatBox"] h3 {
+    color: #F05A28 !important;
+    /* Keep orange */
+}
+
+body.light-mode #home div[class*="StatBox"] p {
+    color: #666 !important;
+}
+
+body.light-mode #home a[class*="ButtonOutline"] {
+    color: #121212 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-mode #home a[class*="ButtonOutline"]:hover {
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode #home div[class*="OuterCircle"] {
+    background: radial-gradient(circle, rgba(240, 90, 40, 0.05) 0%, transparent 60%) !important;
+}
+
+
+ul {
+    list-style: none;
+}
+
+Link {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dark-nav {
+    background: #01be96;
+    /* background: linear-gradient(270deg, #5a3f16 10%, #19109c 100%); */
+    transition: 0.5s;
+}
+
+
+
+
+
+/* <============================= CSS for Navbar =========================================> */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--header-border);
+}
+
+.nav {
+    height: calc(var(--header-height) + 1.5rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav_logo,
+.nav_toggle {
+    font-weight: var(--font-medium);
+}
+
+.nav_list {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.nav_menu ul {
+    padding-top: 10px;
+}
+
+.nav_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--nav-text);
+    transition: .3s;
+}
+
+.nav_close,
+.nav_toggle {
+    display: none;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .header {
+        top: initial;
+        bottom: 0;
+    }
+
+    .nav {
+        height: var(--header-height);
+    }
+
+    .nav_menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        background-color: var(--header-bg);
+        border: 1px solid var(--header-border);
+        transition: .3s;
+    }
+
+    .show-menu {
+        bottom: 0;
+    }
+
+    .nav_list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .nav_icon {
+        font-size: 1.2rem;
+    }
+
+    .nav_close {
+        position: absolute;
+        color: var(--text-color);
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav_toggle {
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .nav_icon,
+    .nav_close,
+    .nav_toggle {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:350p) {
+    .nav_menu {
+        padding: 2rem 0.25rem 4rem;
+    }
+
+    .nav_list {
+        column-gap: 0;
+    }
+}
+
+/* <============================= CSS for Footer =========================================> */
+
+
+hr {
+    width: 90%;
+    border-bottom: 1px solid var(--card-border);
+    margin: 20px auto;
+}
+
+.footerline {
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+#footer-a {
+    color: #F05A28;
+}
+
+#footer-a:hover {
+    transition: 0.4s;
+    color: var(--text-color);
+}
