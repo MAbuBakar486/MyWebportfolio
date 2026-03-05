@@ -22,7 +22,7 @@ function App() {
         <Preloader duration={4700} />
 
         <div className="main-content">
-          <AppRoutes />   {/* ✅ works now */}
+          <AppRoutes />
         </div>
 
         <WhatsAppButton />
