@@ -1,64 +1,154 @@
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/portfolio-logo.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
 
-  <title>Hafiz Abu Bakar — Portfolio</title>
-
-  <meta name="description" content="I am Hafiz Abu Bakar — a full-stack Web & Mobile App Developer specializing in React, Flutter, Firebase, and modern UI/UX. I build fast, optimized, scalable digital products." />
-  <meta http-equiv="Content-Language" content="en, ur" />
-  <link rel="canonical" href="https://your-portfolio-domain.com" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/heroimg.png" />
+  <link rel="icon" href="/heroimg.png" sizes="32x32" />
+  <link rel="icon" href="/heroimg.png" sizes="192x192" />
+  <link rel="shortcut icon" href="/heroimg.png" />
+  <link rel="apple-touch-icon" href="/heroimg.png" />
   
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <!-- Primary SEO -->
+  <title>Hafiz Abu Bakar | React & Flutter Developer | Full Stack Developer Pakistan</title>
+
+  <meta name="description"
+    content="Official portfolio of Hafiz Abu Bakar — Full Stack Web & Mobile App Developer from Pakistan specializing in React, Flutter, Firebase, UI/UX and modern scalable applications." />
+
   <meta name="keywords" content="
-    Hafiz Abu Bakar, Abu Bakar Portfolio, Web Developer Pakistan,
-    Flutter Developer, React Developer, Mobile App Developer,
-    Full Stack Developer, Portfolio Developer Pakistan,
-    Frontend Developer, Backend Developer, Firebase Developer
-  " />
+    Hafiz Abu Bakar,
+    Hafiz Abu Bakar Developer,
+    Abu Bakar React Developer,
+    Flutter Developer Pakistan,
+    Full Stack Developer Pakistan,
+    React Portfolio Developer,
+    Freelance Developer Pakistan,
+    Firebase Developer,
+    Mobile App Developer Pakistan,
+    React JS Developer Portfolio,
+    Flutter App Developer Portfolio
+    "/>
 
-  <meta name="author" content="Hafiz Abu Bakar — Full Stack Developer" />
+  <meta name="author" content="Hafiz Abu Bakar" />
+  <meta http-equiv="Content-Language" content="en, ur" />
+  <meta name="geo.region" content="PK">
+  <meta name="geo.placename" content="Pakistan">
 
-  <!-- Social Cards -->
+  <link rel="canonical" href="https://hafizportfolio.vercel.app/" />
+
+  <!-- Google Verification (optional) -->
+  <meta name="google-site-verification" content="add-if-you-have" />
+
+  <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hafiz Abu Bakar — Full Stack Developer Portfolio" />
+  <meta property="og:description"
+    content="Explore the portfolio of Hafiz Abu Bakar, a Full Stack Web & Mobile App Developer building modern apps using React, Flutter, and Firebase." />
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://hafizportfolio.vercel.app/" />
+  <meta property="og:image" content="https://hafizportfolio.vercel.app/portfolio-banner.png" />
+  <meta property="og:site_name" content="Hafiz Abu Bakar Portfolio" />
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Hafiz Abu Bakar — Full Stack Developer Portfolio" />
-  <meta name="twitter:description" content="Portfolio of Hafiz Abu Bakar — Web & Mobile App Developer (React, Flutter, Firebase)" />
-  <meta property="og:image" content="%PUBLIC_URL%/portfolio-banner.png" />
+  <meta name="twitter:description"
+    content="Portfolio showcasing React, Flutter, Firebase and Full Stack projects by Hafiz Abu Bakar." />
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://hafizportfolio.vercel.app/portfolio-banner.png" />
 
-  <meta property="og:title" content="Hafiz Abu Bakar — Full Stack Developer Portfolio" />
-  <meta property="og:description" content="Modern web & app development portfolio showcasing React, Flutter & Firebase projects." />
-  <meta property="og:image" content="%PUBLIC_URL%/portfolio-banner.png" />
-  <meta property="og:url" content="https://your-portfolio-domain.com" />
-  <meta property="og:type" content="website" />
-
-  <!--=============== Fonts & Icons ===============-->
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- ✅ Structured Data -->
-<script type="application/ld+json">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Structured Data (Developer Schema) -->
+  <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Hafiz Abu Bakar",
-  "url": "https://your-portfolio-domain.com",
-  "image": "https://your-portfolio-domain.com/portfolio-banner.png",
-  "jobTitle": "Full Stack Web & App Developer",
-  "description": "React & Flutter developer specializing in web apps, mobile apps, Firebase, and UI/UX.",
-  "sameAs": [
-    "https://github.com/yourprofile",
-    "https://www.linkedin.com/in/yourprofile",
-    "https://twitter.com/yourprofile"
-  ]
+ "@context": "https://schema.org",
+ "@graph": [
+
+{
+ "@type": "Person",
+ "name": "Hafiz Abu Bakar",
+ "url": "https://hafizportfolio.vercel.app",
+ "image": "https://hafizportfolio.vercel.app/assets/heroimg.png",
+ "jobTitle": "Full Stack Web & Mobile App Developer",
+ "description": "React and Flutter developer building modern web and mobile applications.",
+ "email": "dev.hafizbakar020@gmail.com",
+"sameAs": [
+"https://github.com/MAbuBakar486/",
+"https://www.linkedin.com/in/muhammad-abu-bakar-027b47381",
+"https://www.fiverr.com/hafizbakar632/",
+"https://www.upwork.com/freelancers/~01e576a533296361c1",
+"https://www.facebook.com/profile.php?id=100037329675644",
+"https://calendly.com/dev-hafizbakar020/30min",
+"https://wa.me/92303778240"
+
+]
+},
+
+{
+ "@type": "WebSite",
+ "name": "Hafiz Abu Bakar Portfolio",
+ "url": "https://hafizportfolio.vercel.app",
+ "author": {
+   "@type": "Person",
+   "name": "Hafiz Abu Bakar"
+ }
+},
+
+{
+ "@type": "CreativeWork",
+ "name": "Developer Portfolio",
+ "creator": {
+   "@type": "Person",
+   "name": "Hafiz Abu Bakar"
+ },
+ "url": "https://hafizportfolio.vercel.app"
+}
+
+ ]
 }
 </script>
-</head>
 
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "Portfolio Projects",
+ "applicationCategory": "WebApplication",
+ "creator": {
+   "@type": "Person",
+   "name": "Hafiz Abu Bakar"
+ },
+ "programmingLanguage": [
+   "React",
+   "Flutter",
+   "Firebase",
+   "JavaScript"
+ ],
+ "url": "https://hafizportfolio.vercel.app"
+}
+</script>
+
+
+</head>
 
 <body>
   <noscript>
@@ -74,7 +164,7 @@
     <div class="noscript-actions">
       <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener">How to enable</a>
       <a href="/basic.html">Open basic version</a>
-      <a href="mailto:info@mabubakar.net">Contact support</a>
+      <a href="mailto:dev.hafizbakar020@gmail.com">Contact support</a>
     </div>
   </div>
 </noscript>
@@ -90,5 +180,4 @@
 </body>
 
 </html>
-
 
